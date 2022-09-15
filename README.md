@@ -1,2 +1,2 @@
-# elevador_motor
-Calculadora para saber o porcentagem das maquinas
+# elevador motor
+Calculadora para saber o porcentagem das maquinas.
