@@ -14,8 +14,11 @@ $('#btn-tema4').click(function(){
     localStorage.setItem('tema','<link rel="stylesheet" href="css/tema4.css">')
     window.location.reload()
 })
-//<link rel="stylesheet" href="tema.css">
-document.getElementsByTagName("head")[0].innerHTML += localStorage.getItem('tema')
+$(document).ready(function(){
+    document.getElementsByTagName("head")[0].innerHTML += localStorage.getItem('tema')
+    $("#bloco1").slideUp()
+})
+
 class hora{
     constructor(horaEntrada, horaSaida) {
         this.horaEntrada = horaEntrada;
