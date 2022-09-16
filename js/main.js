@@ -34,22 +34,6 @@ class hora{
         return this.horaSaida / this.horaEntrada
     }
 }
-
-/*
-em-sm
-ee-se
-r1/r2
-
-acima de 60% ruasuavel
-acima de 65% bom
-acima de 70% ótimo
-
-var ee = 3334.5
-var se = 3338.2
-
-var em = 5555.5
-var sm = 5560.3
-*/
 var ee = document.getElementById("ee")
 var se = document.getElementById("se")
 
