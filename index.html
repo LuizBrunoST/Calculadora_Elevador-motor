@@ -31,8 +31,8 @@
     <!-- maquina 1 -->
     <div class="w3-card-4 w3-margin-top w3-theme-d1 w3-display-container">
         <div class="w3-display-topright">
-            <span class="w3-button w3-theme-action" id="btn-mostrar1" onclick="$('#bloco1').slideDown()"><i class="fa-solid fa-caret-down"></i></span>
-            <span class="w3-button w3-theme-action" id="btn-esconder1" onclick="$('#bloco1').slideUp()"><i class="fa-solid fa-caret-up"></i></span>
+            <span class="w3-button w3-theme-action" id="btn-mostrar1" onclick="$('#bloco1').slideDown();"><i class="fa-solid fa-caret-down"></i></span>
+            <span class="w3-button w3-theme-action" id="btn-esconder1" onclick="$('#bloco1').slideUp();"><i class="fa-solid fa-caret-up"></i></span>
         </div>
         <fieldset class="w3-border-theme">
             <legend>Maquina 1:</legend>
@@ -89,7 +89,66 @@
         </fieldset>
     </div><!-- Fim maquina 1 -->
 
-    <div class="w3-card-4 w3-margin-top w3-theme-d1 w3-display-container"></div>
+            <!-- maquina 2 -->
+            <div class="w3-card-4 w3-margin-top w3-theme-d1 w3-display-container">
+                <div class="w3-display-topright">
+                    <span class="w3-button w3-theme-action" id="btn-mostrar2" onclick="$('#maquina2').slideDown();"><i class="fa-solid fa-caret-down"></i></span>
+                    <span class="w3-button w3-theme-action" id="btn-esconder2" onclick="$('#maquina2').slideUp();"><i class="fa-solid fa-caret-up"></i></span>
+                </div>
+                <fieldset class="w3-border-theme">
+                    <legend>Maquina 2:</legend>
+                    <div class="" id="maquina2">
+                        <div class="w3-row w3-theme-d1">
+                            <fieldset class="w3-border-theme">
+                                <legend>Entrada:</legend>
+                                <div id="inputsEntrada" style="display: none;">
+                                    <div class="w3-col s6 w3-padding w3-mobile">
+                                        <span>Hora motor:</span>
+                                        <input class="w3-input w3-theme-d3" id="em2" type="number" placeholder="(Entrada) Entre com hora motor ..">
+                                    </div>
+                                    <div class="w3-col s6 w3-padding w3-mobile">
+                                        <span>Hora Elevador:</span>
+                                        <input class="w3-input w3-theme-d3" id="ee2" type="number" placeholder="(Entrada) Entre com hora elevador ..">
+                                    </div>
+                                    
+                                    
+                                    <button class="w3-button w3-right w3-theme-dark" id="salvar1-maquina2"><i class="fa-solid fa-floppy-disk"></i> Salvar</button>
+                                </div>
+                                <div id="Text-maquina2">
+                                    <span class="w3-col s6 w3-center" id="emText-maquina2"></span>
+                                    <span class="w3-col s6 w3-center" id="eeText-maquina2"></span>
+                                    <span class="w3-col w3-xlarge w3-center" style="width: 100%;" id="subtracao-maquina2"></span>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="w3-row w3-theme-d1">
+                            <fieldset class="w3-border-theme">
+                                <legend>Saída:</legend>
+                                <div id="inputsEntrada1" style="display: none;">
+                                    <div class="w3-col s6 w3-padding w3-mobile">
+                                        <span>Hora motor:</span>
+                                        <input class="w3-input w3-theme-d3" id="sm2" type="number" placeholder="(Saída) Entre com hora motor ..">
+                                    </div>
+                                    <div class="w3-col s6 w3-padding w3-mobile">
+                                        <span>Hora elevador:</span>
+                                        <input class="w3-input w3-theme-d3" id="se2" type="number" placeholder="(Saída) Entre com hora elevador ..">
+                                    </div>
+                                    <button class="w3-button w3-right w3-theme-dark" id="salvar2-maquina2"><i class="fa-solid fa-floppy-disk"></i> Salvar</button>
+                                </div>
+                                <div id="Text2-maquina2">
+                                    <span class="w3-col s6 w3-center" id="smText-maquina2"></span>
+                                    <span class="w3-col s6 w3-center" id="seText-maquina2"></span>
+                                    <span class="w3-col w3-xlarge w3-center" style="width: 100%;" id="subtracao2-maquina2"></span>
+                                    
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="w3-padding w3-margin-top w3-theme-d1">
+                        <div class="w3-theme-l1 w3-round" id="progress-maquina2"></div>
+                    </div>
+                </fieldset>
+            </div><!-- Fim maquina 2 -->
     <script src="js/main.js"></script>
 </body>
 </html>

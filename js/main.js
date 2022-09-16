@@ -17,6 +17,7 @@ $('#btn-tema4').click(function(){
 $(document).ready(function(){
     document.getElementsByTagName("head")[0].innerHTML += localStorage.getItem('tema')
     $("#bloco1").slideUp()
+    $("#maquina2").slideUp()
 })
 
 class hora{
@@ -66,6 +67,7 @@ if (localStorage.getItem('se')==null || localStorage.getItem('sm')==null) {
     $("#inputs2").show()
     $("#Text2").hide()
 }
+
 $("#salvar1").click(function(){
     localStorage.setItem("ee",ee.value)
     localStorage.setItem("em",em.value)
@@ -92,3 +94,50 @@ const gg = new hora(motor.menos(),elevador.menos())
 $("#subtracao").text(motor.menos().toFixed('1'))
 $("#subtracao2").text(elevador.menos().toFixed('1'))
 $("#progress").append('<div class="w3-container w3-theme-d5 w3-center w3-round" style="max-width:'+gg.divisao().toFixed('2').replace('.','')+'%; height:20px;">'+gg.divisao().toFixed('2').replace('.','').replace('0','')+'%</div>')
+
+var ee2 = document.getElementById("ee2")
+var se2 = document.getElementById("se2")
+
+var em2 = document.getElementById("em2")
+var sm2 = document.getElementById("sm2")
+
+document.getElementById("emText-maquina2").innerHTML = localStorage.getItem('em2')
+document.getElementById("eeText-maquina2").innerHTML = localStorage.getItem('ee2')
+document.getElementById("smText-maquina2").innerHTML = localStorage.getItem('sm2')
+document.getElementById("seText-maquina2").innerHTML = localStorage.getItem('se2')
+
+if (localStorage.getItem('ee2') == null || localStorage.getItem('em2') == null) {
+    $("#inputsEntrada").show()
+    $("#Text-maquina2").hide()
+}
+if (localStorage.getItem('se2')==null || localStorage.getItem('sm2')==null) {
+    $("#inputsEntrada1").show()
+    $("#Text2-maquina2").hide()
+}
+
+$("#salvar1-maquina2").click(function(){
+    localStorage.setItem("ee2",ee2.value)
+    localStorage.setItem("em2",em2.value)
+    $("#inputsEntrada").hide()
+    window.location.reload()
+})
+$("#salvar2-maquina2").click(function(){
+    localStorage.setItem("se2",se2.value)
+    localStorage.setItem("sm2",sm2.value)
+    $("#inputsEntrada1").hide()
+    window.location.reload()
+})
+$("#btn-limpar").click(function(){
+    if(confirm("Deseja elimar todos os dados?")==true){
+        localStorage.clear()
+        window.location.reload()
+    }else{
+        
+    }
+})
+const motor2 = new hora(localStorage.getItem('em2'),localStorage.getItem('sm2'))
+const elevador2 = new hora(localStorage.getItem('ee2'),localStorage.getItem('se2'))
+const gg2 = new hora(motor2.menos(),elevador2.menos())
+$("#subtracao-maquina2").text(motor2.menos().toFixed('1'))
+$("#subtracao2-maquina2").text(elevador2.menos().toFixed('1'))
+$("#progress-maquina2").append('<div class="w3-container w3-theme-d5 w3-center w3-round" style="max-width:'+gg2.divisao().toFixed('2').replace('.','')+'%; height:20px;">'+gg2.divisao().toFixed('2').replace('.','').replace('0','')+'%</div>')
