@@ -6,8 +6,8 @@ Calculadora para saber o porcentagem das maquinas.
 (r1/r2)
 
 Acima de **60%** Razoável - **aproveitamento**
-Acima de **65%** Bom - **aproveitamento**
-Acima de **70%** Ótimo - **aproveitamento**
+<br>Acima de **65%** Bom - **aproveitamento**
+<br>Acima de **70%** Ótimo - **aproveitamento**
 
 ```javascript
 var ee = 3334.5;
